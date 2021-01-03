@@ -1,38 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+    margin: 1rem;
+    display: block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (min-width: 1200px) {
+    .App {
+        max-width: 1110px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #8090A5;
+    margin: 0 auto 1rem;
+    width: 40rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .nav button {
+    background-color: white;
+    color: #8090A5;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 0.35rem 0.5rem;
+    transition: 0.333s;
 }
 
-.App-link {
-  color: #61dafb;
+.App .nav button:hover {
+    background-color: #3c454f;
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .promotions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 1rem;
+}
+
+.App .promotion {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.App .promotion img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.App .promotion .info {
+    background-color: #F2F2F2;
+    padding: 1rem;
+    color: #47525E;
+}
+
+.App .promotion .info h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0 0 0.5rem;
+}
+
+.App .promotion .info p {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.App .promotion .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.App .promotion .buttons a {
+    display: block;
+    border: 1px solid #47525E;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 0.935rem;
+    transition: 0.333s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.App .promotion .buttons a.terms {
+    background-color: #F2F2F2;
+    color: #47525E;
+    margin-right: 0.6rem;
+}
+
+.App .promotion .buttons a.join {
+    background-color: #47525E;
+    color: #F2F2F2;
+}
+
+.App .promotion .buttons a.join:hover {
+    background-color: #3c454f;
+}
+
+.App .promotion .buttons a.terms:hover {
+    background-color: #e5e5e5;
 }
